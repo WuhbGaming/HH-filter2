@@ -1,0 +1,38 @@
+! Title: hh kiss filter
+! Expires: 1 days
+! Homepage: https://github.com/Yumire/kiss-filters
+! Description: A list of filters for use with the various Kiss sites.
+
+# ==========
+# hentaihaven.xxx
+# ==========
+
+||hentaihaven.xxx^*.aspx$subdocument,first-party
+hentaihaven.xxx##div.divCloseBut
+hentaihaven.xxx##.videoAdClose
+hentaihaven.xxx###adsIfrme7
+
+# One of these should work ¯\_(ツ)_/¯
+hentaihaven.xxx##+js(abort-current-inline-script.js, InitCloseButton)
+hentaihaven.xxx##+js(abort-current-inline-script.js, isClickHide)
+hentaihaven.xxx##+js(abort-current-inline-script.js, AddCloseButton)
+
+hentaihaven.xxx###divContentVideo:style(display: block !important)
+hentaihaven.xxx###divVideo:style(display: block !important)
+
+# CF Captcha Fix
+@@||hcaptcha.com$script,domain=hentaihaven.xxx
+
+# Fix Nova player download
+@@||cdnjs.cloudflare.com/ajax/libs/jquery/*$script,domain=novelplanet.me
+
+# Fix some servers not working due to an EasyList filter
+@@||fonts.googleapis.com^$stylesheet,domain=hentaihaven.xxx
+@@||vjs.zencdn.net^$stylesheet,domain=hentaihaven.xxx
+@@||2.bp.blogspot.com^$xhr,domain=hentaihaven.xxx
+@@||novelplanet.com$xhr,domain=hentaihaven.xxx
+@@||replay.watch^$xhr,domain=hentaihaven.xxx
+@@||coacoaca-opensocial.googleusercontent.com^$xhr,domain=hentaihaven.xxx
+
+
+@@||file-comic-99.anyacg.co^$image,domain=hentaihaven.xxx
